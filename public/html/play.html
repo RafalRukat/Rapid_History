@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<div class="wrapper wrapper--play">
+    <nav class="navigation">
+        <ul class="menu">
+            <li class="menu__element"><a href="../index.html" class="menu__hyperlink">Home</a></li>
+            <li class="menu__element"><a href="login.html" class="menu__hyperlink">Sign in</a></li>
+            <li class="menu__element"><a href="play.html" class="menu__hyperlink">Play now</a></li>
+            <li class="menu__element"><a href="results.html" class="menu__hyperlink">Results</a></li>
+            <li class="menu__element"><a href="about.html" class="menu__hyperlink">About</a></li>
+            <li class="menu__element"><a href="faq.html" class="menu__hyperlink">FAQ</a></li>
+        </ul>
+    </nav>
+    <main class="play-panel">
+<div id="question" class="question"></div>
+<button id="answer1" class="answer" data-num="0"></button>
+<button id="answer2" class="answer" data-num="1"></button>
+<button id="answer3" class="answer" data-num="2"></button>
+<button id="answer4" class="answer" data-num="3"></button>
+        <h2 class="correct-answers">Correct answers: <span id="correct-answers">0</span>/<span id="all-answers">0</span></h2>
+
+</main>
+</div>
+<script src="../scripts/play.js"></script>
+</body>
+</html>

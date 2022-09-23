@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Sansita&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+body {
+    --highlight: goldenrod;
+    font-family: 'Sansita', sans-serif;
+    background-image: url("../img/mainbackground.jpg");
+}
+
+.wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, .5);
+}
+
+.wrapper--play {
+    color: white;
+    font-size: 1.5rem;
+
+
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+    background-color: darkkhaki;
+    background-color: rgb(189, 183, 107, .9);
+}
+
+.menu__element {
+    flex-grow: 1;
+    cursor: pointer;
+    padding: 2% 0;
+}
+
+.menu__hyperlink {
+    color: black;
+    text-decoration: none;
+    font-size: 1.5rem;
+    transition: .2s;
+}
+
+.menu__hyperlink:hover {
+    color: green;
+}
+
+.welcome {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: space-around;
+    color: white;
+    font-size: 1.5rem;
+}
+
+
+.play-panel {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.question {
+    margin-bottom: 5vh;
+    font-size: 2rem;
+}
+
+.answer {
+    cursor: pointer;
+    font-weight: bold;
+    background-color: darkkhaki;
+    border-bottom: 0;
+    transition: .2s;
+    width: 20%;
+    padding: 1% 2%;
+    font-size: 1rem;
+
+}
+
+.answer:hover {
+    background-color: darkgoldenrod;
+}
+
+.answer:last-of-type {
+    border-bottom: black 2px solid;
+}
+
+.correct-answers {
+    font-size: 1.5rem;
+    padding: 4% 0;
+}
+
+.highlight {
+    color: var(--highlight)
+}
+
+.under-construction {
+    background-image: url('../img/under_construction.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.play-result {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.play-again {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    padding: 3%;
+    transform: translateX(-50%);
+    background-color: transparent;
+    border: 2px white solid;
+    border-radius: 50%;
+    text-decoration: none;
+    color: white;
+    font-family: 'Sansita', sans-serif;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.play-again:hover {
+    color: darkgoldenrod;
+    border-color: darkgoldenrod;
+    background-color: black;
+    padding: 5%;
+}
