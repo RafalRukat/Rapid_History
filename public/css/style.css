@@ -10,6 +10,9 @@
 
 body {
     --highlight: goldenrod;
+    --form-element-width: 170px;
+    --test-border: 1px solid white;
+
     font-family: 'Sansita', sans-serif;
     background-image: url("../img/mainbackground.jpg");
 }
@@ -60,12 +63,15 @@ body {
 .welcome {
     display: flex;
     flex-direction: column;
-    flex-grow: 1;
-    justify-content: space-around;
+    justify-content: center;
+    height: 80vh;
     color: white;
     font-size: 1.5rem;
 }
 
+.welcome * {
+    margin-bottom: 50px;
+}
 
 .play-panel {
     display: flex;
@@ -145,3 +151,53 @@ body {
     background-color: black;
     padding: 5%;
 }
+
+/*LOGIN*/
+.log-panel {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 80vh;
+    color: white;
+    padding: 30px 400px;
+}
+
+.log-panel__call-to-login {
+    font-size: 1.5rem;
+}
+
+.log-panel__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 50vh;
+    padding: 11vh;
+    background-color: #000a;
+
+
+}
+
+.log-panel__label {
+    text-align: left;
+    width: var(--form-element-width);
+    font-size: 1rem;
+
+}
+
+.log-panel__input {
+    width: var(--form-element-width);
+    padding: 4px;
+}
+
+.log-panel__submit-button {
+    width: var(--form-element-width);
+    padding: 4px;
+
+
+}
+
+/*.log-panel__submit-button {*/
+/*    width: 100px;*/
+/*    height: 30px;*/
+/*}*/

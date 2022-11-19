@@ -1,5 +1,5 @@
-const {getRandomInt, shuffleTheArray} = require("../tools/my-tools");
-const fetch = require("node-fetch");
+// const {getRandomInt, shuffleTheArray} = require("../tools/my-tools");
+// const fetch = require("node-fetch");
 
 function gameRoutes(app) {
     const fetch = require("node-fetch");

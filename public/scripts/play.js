@@ -58,3 +58,4 @@ for (const button of buttons){
 //todo przenieść elementy html do js
 
 
+
