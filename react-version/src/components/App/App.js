@@ -1,4 +1,4 @@
-import React, {useEffect, useState, createContext} from "react";
+import React, {useEffect, useState} from "react";
 import {AppContext, defaultObject} from "../../AppContext";
 import {Route, Routes} from "react-router";
 import {Home} from "../Home/Home"
@@ -13,23 +13,8 @@ import './App.css';
 
 function App() {
     const [randomYear, setRandomYear] = useState(defaultObject.actualYear);
-
-    const reloadRandomYear = () => {
-        setRandomYear(Math.floor(Math.random() * 2010));
-    }
-
     const [answer, setAnswer] = useState(null);
-
-    // useEffect(() => {
-    //     const getAnswer = async () => {
-    //         console.log('pytam o ' + randomYear)
-    //         const res = await fetch(`http://numbersapi.com/${randomYear}/year`);
-    //         const data = await res.text();
-    //         data.includes("NaN") ? getAnswer() : setAnswer(data);
-    //     }
-    //     getAnswer();
-    // }, [randomYear]);
-
+    const [language, setLanguage] = useState('EN');
     useEffect(() => {
         const getAnswer = (async () => {
             console.log('pytam o ' + randomYear)
@@ -39,11 +24,22 @@ function App() {
         })();
     }, [randomYear]);
 
+    const reloadRandomYear = () => {
+        setRandomYear(Math.floor(Math.random() * 2010));
+    };
+
+    const toggleLanguage = (prevLanguage) => {
+        setLanguage(() => {
+            if (prevLanguage === 'EN') {return 'PL'} else {return 'EN'};
+        });
+        console.log (language);
+
+    };
 
   return (
     <div className="App">
-        <AppContext.Provider value={{actualYear: randomYear, setActualYear: reloadRandomYear}}>
-      <Navigation itemsList={navigationItemsNames} reload={reloadRandomYear} />
+        <AppContext.Provider value={{actualYear: randomYear, language: language,}}>
+      <Navigation itemsList={navigationItemsNames} reload={reloadRandomYear} toggleLanguage={toggleLanguage} />
         <Routes>
             <Route path="" element={<Home randomYear={randomYear.toString()} answer={answer}/>}></Route>
             <Route path="/Home" element={<Home randomYear={randomYear.toString()} answer={answer} />}></Route>
@@ -53,7 +49,7 @@ function App() {
             <Route path="/About" element={<About/>}></Route>
             <Route path="/FAQ" element={<Faq/>}></Route>
         </Routes>
-            </AppContext.Provider>
+        </AppContext.Provider>
     </div>
   );
 }

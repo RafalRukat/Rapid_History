@@ -6,7 +6,7 @@ import "./Faq.css"
 
 export const Faq = props => {
 
-    const { actualYear } = useContext(AppContext);
+    const { actualYear, language } = useContext(AppContext);
 
 
     return (
@@ -14,7 +14,7 @@ export const Faq = props => {
             <h1 className="Faq__title">FAQ</h1>
             <ul className="Faq__list">
                 <FaqOneItem
-                    question="What year is actually on agenda?"
+                    question={language === "EN" ? "What year is actually on agenda?" : "Który rok jest wylosowany?"}
                     answer={actualYear}
                 />
                 <FaqOneItem

@@ -3,7 +3,7 @@
 .Faq__list {
 display: flex;
     flex-direction: column;
-    padding: 50px 15%;
+    /*padding: 50px 15%;*/
     list-style: none;
 }
 
@@ -33,5 +33,4 @@ display: flex;
 
 Faq__answer--visible {
     opacity: 1;
-    transition: .7s;
 }

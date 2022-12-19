@@ -1,18 +1,21 @@
 import React from "react";
 import {NavigationOneItem} from "./NavigationOneItem";
+import {LanguageHandler} from "../LanguageHandler/LanguageHandler";
+
 
 import "./Navigation.css"
 
-export const Navigation = (props) => {
+export const Navigation = ({itemsList, reload, toggleLanguage}) => {
 
     return (
         <nav className="Navigation">
             <ul className="Navigation__menu">
-                {props.itemsList.map((itemName) => {
+                {itemsList.map((itemName) => {
                     return (
-                    <NavigationOneItem name={itemName} key={itemName} reload={props.reload}/>
-                    )
+                    <NavigationOneItem name={itemName} key={itemName} reload={reload}/>
+                );
                 })}
+                <LanguageHandler toggleLanguage={toggleLanguage}/>
             </ul>
         </nav>
     );
