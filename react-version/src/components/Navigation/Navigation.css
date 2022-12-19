@@ -1,0 +1,24 @@
+.Navigation__menu {
+    display: flex;
+    list-style: none;
+    background-color: darkkhaki;
+    background-color: rgb(189, 183, 107, .9);
+}
+
+.Navigation__one-item {
+    flex-grow: 1;
+    cursor: pointer;
+    padding: 2% 0;
+    color: black;
+    font-size: 1.5rem;
+    transition: .2s;
+}
+
+.Navigation__link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.Navigation__one-item:hover {
+    color: green;
+}

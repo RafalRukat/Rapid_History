@@ -1,0 +1,41 @@
+.Play {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    color: white;
+}
+
+.Play__question {
+    margin-bottom: 5vh;
+    font-size: 2rem;
+}
+
+.Play__answer {
+    cursor: pointer;
+    font-weight: bold;
+    background-color: darkkhaki;
+    border-bottom: 0;
+    transition: .2s;
+    width: 20%;
+    padding: 1% 2%;
+    font-size: 1rem;
+}
+
+.Play__answer:hover {
+    background-color: darkgoldenrod;
+}
+
+.Play__answer:last-of-type {
+    border-bottom: black 2px solid;
+}
+
+.Play__correct-answers {
+    font-size: 1.5rem;
+    padding: 4% 0;
+}
+
+.Play__highlight {
+    color: var(--highlight)
+}

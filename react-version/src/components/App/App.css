@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Sansita&display=swap');
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+body {
+  --highlight: goldenrod;
+  --form-element-width: 170px;
+  --test-border: 1px solid white;
+
+  font-family: 'Sansita', sans-serif;
+  background-image: url("../../../public/mainbackground.jpg");
+}
+
+.App {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, .7);
+}
+
+.App--play {
+  color: white;
+  font-size: 1.5rem;
+}

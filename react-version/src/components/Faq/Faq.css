@@ -1,0 +1,37 @@
+
+
+.Faq__list {
+display: flex;
+    flex-direction: column;
+    padding: 50px 15%;
+    list-style: none;
+}
+
+.Faq__one-item {
+    flex-grow: 1;
+    color: white;
+    margin-bottom: 50px;
+
+}
+
+.Faq__title {
+    font-size: 4rem;margin-top: 50px;
+}
+
+.Faq__question {
+    font-size: 2rem;
+    text-align: left;
+    cursor: pointer;
+
+}
+
+.Faq__answer {
+    font-size: 4rem;
+    text-align: left;
+    opacity: 0;
+}
+
+Faq__answer--visible {
+    opacity: 1;
+    transition: .7s;
+}
